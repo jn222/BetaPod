@@ -5,6 +5,11 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
+/*TODO: Once we create a database for products, we need to make a function that
+				searches db and returns information for each product that we can use to
+				render page
+*/
+
 module.exports = {
 	homepage: function (request, response) {
     return response.view('main_pages/products-homepage', {title: 'BetaPod Products', css: ['../styles/products-homepage.css']});
