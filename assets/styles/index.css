@@ -1,0 +1,80 @@
+.container{
+  text-align: center;
+}
+.business-header {
+    height: 980px;
+    margin-top: 15px;
+    /*background: url('http://localhost:8080/images/header-background.jpg');*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#homepage_logo{
+  height: auto;
+  max-height: 120px;
+}
+
+#upper-header{
+  font-size: 70px;
+}
+
+#lower-header{
+  text-align: left;
+  margin-top: 85px;
+}
+
+.value-prop{
+  margin-top: 85px;
+}
+
+.middle-border {
+	min-height: 300px;
+	margin-top: 145px;
+	border-right: 3px solid #ddd;
+}
+
+.form-box {
+	margin-top: 85px;
+}
+
+.page-section{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.sub-header{
+  text-align: center;
+}
+
+.homepage_icon{
+  width: 180px;
+  height: 180px;
+}
+
+.homepage-product{
+  width: 300px;
+  height: 300px;
+}
+
+.centered-image{
+  float: center;
+}
+
+#how-it-works{
+  padding-bottom: 30px;
+}
+
+#lower-call-to-actn{
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+i, strong{
+  color: #2C9399;
+}
+
+hr{
+  border-width: 3px;
+}

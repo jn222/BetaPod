@@ -2,7 +2,7 @@
   "name": "BetaPod",
   "private": true,
   "version": "0.0.0",
-  "description": "a Sails application",
+  "description": "Website for BetaPod",
   "keywords": [],
   "dependencies": {
     "handlebars": "4.0.6",
