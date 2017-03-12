@@ -9,7 +9,7 @@ Install sails.js by running 'npm install -g sails'
 Clone or download the repository to your local machine  
 In the project directory, run 'npm install' from the terminal.  
 To start the server, run 'npm start'.  
-Now you can go to the website at locahost:8080  
+Now you can go to the website at locahost:1337  
 
 ## Contributors
 
