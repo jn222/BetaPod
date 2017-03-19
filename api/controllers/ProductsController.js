@@ -15,6 +15,11 @@ module.exports = {
     return response.view('main_pages/products-homepage', {title: 'BetaPod Products', css: ['../styles/products-homepage.css']});
   },
 
+	show: function (request, response) {
+		name = request.param('name');
+		return response.view('main_pages/product', {layout: 'layout.handlebars', title: name, css: ['../styles/products.css'], product_image: image, product_tile: name, product_info: description});
+	},
+
 	fitbit: function (request, response) {
     return response.view('products/fitbit', {layout: 'product', title: 'FitBit Flex', css: ['../styles/products.css'], product_image: '/images/products/fitbit.png', product_title: 'Fitbit Flex', product_description: '', stock: 'In Stock', product_info: 'Make fitness a lifestyle with Fitbit Flex—a slim, stylish device that tracks all-day activity like steps, distance, calories burned and active minutes. See how every day stacks up with LEDs that light up like a scoreboard as you get closer to your goal. Then wear it at night to measure your sleep quality and wake with a silent, vibrating alarm. Day or night, Flex fits comfortably around your wrist, is water-resistant, and has a 5-day battery life. It also syncs to computers and 150+ leading smartphones, so you can access your stats anywhere and see your progress in charts and graphs.'});
   },

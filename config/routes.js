@@ -46,22 +46,6 @@ module.exports.routes = {
 
   'get /products': 'ProductsController.homepage',
 
-  'get /products': 'ProductsController.homepage',
-
-  'get /products/fitbit': 'ProductsController.fitbit',
-
-  'get /products/echo': 'ProductsController.echo',
-
-  'get /products/drone': 'ProductsController.drone',
-
-  'get /products/snapchat_glasses': 'ProductsController.snapchat_glasses',
-
-  'get /products/leap_motion': 'ProductsController.leap_motion',
-
-  'get /products/360_camera': 'ProductsController.camera',
-
-  'get /products/3-d_pen': 'ProductsController.pen',
-
-  'get /products/rocketbook_notebook': 'ProductsController.rocketbook_notebook'
+  'get /products/:name' : 'ProductsController.show'
 
 };
