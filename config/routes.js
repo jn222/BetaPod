@@ -46,8 +46,6 @@ module.exports.routes = {
 
   'get /products': 'ProductsController.homepage',
 
-  'get /products': 'ProductsController.homepage',
-
   'get /products/fitbit': 'ProductsController.fitbit',
 
   'get /products/echo': 'ProductsController.echo',

@@ -7,7 +7,7 @@
 
 /*TODO: Once we create a database for products, we need to make a function that
 				searches db and returns information for each product that we can use to
-				render page
+				render each page
 */
 
 module.exports = {
