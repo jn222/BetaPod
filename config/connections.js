@@ -42,10 +42,10 @@ module.exports.connections = {
   ***************************************************************************/
  devMysqlServer: {
    adapter: 'sails-mysql',
-   host: 'localhost',
+   host: 'jonathan-VirtualBox',
    user: 'root', //optional
    password: 'root', //optional
-   database: 'YOUR_MYSQL_DB' //optional
+   database: 'BetaPod' //optional
  },
 
  prodMysqlServer: {
