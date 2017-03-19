@@ -11,13 +11,25 @@
 */
 
 module.exports = {
-	homepage: function (request, response) {
+	index: function (request, response) {
     return response.view('main_pages/products-homepage', {title: 'BetaPod Products', css: ['../styles/products-homepage.css']});
   },
 
 	show: function (request, response) {
-		name = request.param('name');
-		return response.view('main_pages/product', {layout: 'layout.handlebars', title: name, css: ['../styles/products.css'], product_image: image, product_tile: name, product_info: description});
+		productName = request.param('name');
+
+		Product.findOne({
+		  name: productName
+		}).exec(function (err, product){
+		  if (err) {
+		    return res.serverError(err);
+		  }
+		  if (!product) {
+		    return res.notFound('Could not find that product, sorry.');
+		  }
+
+		 	return response.view('main_pages/product', {layout: 'layout.handlebars', title: name, css: ['../styles/products.css'], product_image: product.image, product_tile: product.name, product_info: product.description});
+		});
 	},
 
 	fitbit: function (request, response) {

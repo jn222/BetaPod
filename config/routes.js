@@ -44,7 +44,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'get /products': 'ProductsController.homepage',
+  'get /products': 'ProductsController.index',
 
   'get /products/:name' : 'ProductsController.show'
 
