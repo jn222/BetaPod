@@ -5,7 +5,6 @@
   "description": "Website for BetaPod",
   "keywords": [],
   "dependencies": {
-    "handlebars": "4.0.6",
     "ejs": "2.3.4",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
@@ -19,10 +18,12 @@
     "grunt-contrib-watch": "1.0.0",
     "grunt-sails-linker": "~0.10.1",
     "grunt-sync": "0.5.2",
+    "handlebars": "4.0.6",
     "include-all": "^1.0.0",
     "rc": "1.0.1",
     "sails": "~0.12.13",
-    "sails-disk": "~0.10.9"
+    "sails-disk": "~0.10.9",
+    "sails-mysql": "^0.11.5"
   },
   "scripts": {
     "debug": "node debug app.js",
