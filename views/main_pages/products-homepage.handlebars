@@ -1,147 +1,16 @@
 <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-12">
-                {{#if products.find}}
-                  {{#each product}}
-                  <div class="col-sm-4 col-lg-3 col-md-4 col-xs-6">
-                      <div class="thumbnail">
-                        <div class="thumbnail-image-container">
-                          <a href="/products/{{product.name}}"><img src={{product.image}} alt="" class="thumbnail-image"></a>
-                        </div>
-                          <div class="caption">
-                              <h4><a href="/products/{{product.name}}">{{product.name}}</a>
-                              </h4>
-                              <p>Try our {{product.name}}!</p>
-                          </div>
-                      </div>
-                  </div>
-                  {{/each}}
-                {{/if}}
-                <div class="row">
-
-                    <div class="col-sm-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="thumbnail">
-                          <div class="thumbnail-image-container">
-                            <a href="/products/fitbit"><img src="/images/products/fitbit.png" alt="" class="thumbnail-image"></a>
-                          </div>
-                            <div class="caption">
-                                <!--
-                                <h4 class="pull-right">$24.99</h4>
-                              -->
-                                <h4><a href="/products/fitbit">Fitbit Flex</a>
-                                </h4>
-                                <p>Try our Fitbit Flex!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="thumbnail">
-                          <div class="thumbnail-image-container">
-                            <a href="/products/echo"><img src="/images/products/echodot.jpg" alt="" class="thumbnail-image"></a>
-                          </div>
-                            <div class="caption">
-                                <h4><a href='/products/echo'>Echo Dot</a></h4>
-
-                                <p>Try our Amazon Echo Dot!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="thumbnail">
-                          <div class="thumbnail-image-container">
-                            <a href="/products/drone"><img src="/images/products/drone.jpg" alt="" class="thumbnail-image">
-                          </div>
-                            <div class="caption">
-                                <h4><a href="/products/drone">Drone</a>
-                                </h4>
-                                <p>Try our drone!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="thumbnail">
-                          <div class="thumbnail-image-container">
-                            <a href="/products/snapchat_glasses"><img src="/images/products/snapchat_glasses.jpg" alt="" class="thumbnail-image">
-                          </div>
-                            <div class="caption">
-
-                                <h4><a href="/products/snapchat_glasses">Snapchat Glasses</a>
-                                </h4>
-                                <p>Try our Snapchat Glasses!</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- end row-->
-                  </div>
-
-                  <div class="row">
-
-                    <div class="col-sm-4 col-lg-3 col-md-4 col-xs-6">
-                      <div class="thumbnail">
-                        <div class="thumbnail-image-container">
-                          <a href="/products/leap_motion"><img src="/images/products/leap_motion.jpg" alt="" class="thumbnail-image">
-                        </div>
-                        <div class="caption">
-
-                            <h4><a href="/products/leap_motion">Leap Motion</a>
-                            </h4>
-                            <p>Try our Leap Motion!</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-3 col-md-4 col-xs-6">
-                      <div class="thumbnail">
-                        <div class="thumbnail-image-container">
-                          <a href="/products/360_camera"><img src="/images/products/360_camera.jpg" alt="" class="thumbnail-image">
-                        </div>
-                        <div class="caption">
-
-                            <h4><a href="/products/360_camera">LG G5 360 Camera</a>
-                            </h4>
-                            <p>Try our LG G5 360 Degree Camera!</p>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-3 col-md-4 col-xs-6">
-                      <div class="thumbnail">
-                        <div class="thumbnail-image-container">
-                          <a href="/products/3-d_pen"><img src="/images/products/3-d_pen.jpg" alt="" class="thumbnail-image">
-                        </div>
-                        <div class="caption">
-
-                            <h4><a href="/products/3-d_pen">Soyan 3-D Pen</a>
-                            </h4>
-                            <p>Try our Soyan 3-D Pen!</p>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-3 col-md-4 col-xs-6">
-                      <div class="thumbnail">
-                        <div class="thumbnail-image-container">
-                          <a href="/products/rocketbook_notebook"><img src="/images/products/rocketbook_wave.jpg" alt="" class="thumbnail-image">
-                        </div>
-                        <div class="caption">
-
-                            <h4><a href="/products/rocketbook_notebook">Rocketbook Notebook</a>
-                            </h4>
-                            <p>Try our Smart Notebook</p>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
+    {{#each products}}
+    <div class="col-sm-4 col-lg-3 col-md-4 col-xs-6">
+        <div class="thumbnail">
+          <div class="thumbnail-image-container">
+            <a href="/products/{{this.name}}"><img src={{this.image}} alt="" class="thumbnail-image"></a>
+          </div>
+            <div class="caption">
+                <h4><a href="/products/{{this.name}}">{{this.name}}</a>
+                </h4>
+                <p>Try our {{this.name}}!</p>
             </div>
         </div>
     </div>
+    {{/each}}
+</div>

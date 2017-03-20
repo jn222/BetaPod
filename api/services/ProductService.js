@@ -1,7 +1,8 @@
-module.exports {
-  getProducts: function(next){
+module.exports = {
+  getProducts: function(res, next){
     Product.find().exec(function(err, products){
       if(err){
+        console.log(err)
         return res.serverError(err)
       }
       if(!products){
@@ -12,7 +13,7 @@ module.exports {
     })
   },
 
-  getOneProduct: function(productName, next){
+  getOneProduct: function(res, productName, next){
     Product.findOne({name: productName}).exec(function (err, product){
 		  if (err) {
 		    return res.serverError(err);
