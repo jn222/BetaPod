@@ -5,31 +5,22 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
-/*TODO: Once we create a database for products, we need to make a function that
-				searches db and returns information for each product that we can use to
-				render each page
-*/
-
 module.exports = {
 	index: function (request, response) {
-    return response.view('main_pages/products-homepage', {title: 'BetaPod Products', css: ['../styles/products-homepage.css']});
+
+		ProductService.getProducts(function(products){
+			return response.view('main_pages/products-homepage', {title: 'BetaPod Products', css: ['../styles/products-homepage.css']});
+		});
+
   },
 
 	show: function (request, response) {
 		productName = request.param('name');
 
-		Product.findOne({
-		  name: productName
-		}).exec(function (err, product){
-		  if (err) {
-		    return res.serverError(err);
-		  }
-		  if (!product) {
-		    return res.notFound('Could not find that product, sorry.');
-		  }
-
-		 	return response.view('main_pages/product', {layout: 'layout.handlebars', title: name, css: ['../styles/products.css'], product_image: product.image, product_tile: product.name, product_info: product.description});
+		ProductService.getOneProduct(productName, function(product){
+			return response.view('main_pages/product', {layout: 'layout.handlebars', title: name, css: ['../styles/products.css'], product_image: product.image, product_tile: product.name, product_info: product.description});
 		});
+
 	},
 
 	fitbit: function (request, response) {
